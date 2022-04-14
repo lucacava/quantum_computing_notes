@@ -1,0 +1,54 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{neuralnetwork}
+\usepackage{tikz}
+\usetikzlibrary{quantikz}
+\usepackage{bm} % bold vectors in math mode
+\usepackage{amsmath}
+
+\author{Luca Cavallini}
+\title{Quantum Computing Notes}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Fundamentals}
+
+\section{Gates}
+
+\subsection{Identity gate}
+
+\begin{equation}
+	I =
+	\begin{bmatrix}
+		1 & 0\\
+		0 & 1
+	\end{bmatrix}
+\end{equation}
+
+\subsection{Hadamard gate}
+
+\begin{equation}
+	H = \dfrac{1}{\sqrt{2}}
+	\begin{bmatrix}
+		1&1\\
+		1&-1
+	\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+	\ket{0} \mapsto \dfrac{\ket{0} + \ket{1}}{\sqrt{2}}, \ket{1} \mapsto \dfrac{\ket{0} - \ket{1}}{\sqrt{2}}
+\end{equation}
+
+\begin{center}
+	\begin{quantikz}	
+		& \gate{H} & \qw
+	\end{quantikz}
+\end{center}
+
+
+\end{document}
