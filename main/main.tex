@@ -20,6 +20,32 @@
 
 \section{Gates}
 
+\subsection{NOT gate}
+
+\begin{center}
+	\begin{quantikz}	
+		& \gate{X} & \qw
+	\end{quantikz}
+\end{center}
+
+\subsection{Definizione}
+
+\begin{equation}
+	X =
+	\begin{bmatrix}
+		0 & 1 \\
+		1 & 0
+	\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		& X \ket{0} = \ket{1}  \\  
+		& X \ket{1} = \ket{0}  \\  
+		& X (\alpha \ket{0} + \beta \ket{1}) = \alpha \ket{1} + \beta \ket{0}
+	\end{aligned}
+\end{equation}
+
 \subsection{Identity gate}
 
 \begin{equation}
@@ -32,6 +58,14 @@
 
 \subsection{Hadamard gate}
 
+\begin{center}
+	\begin{quantikz}	
+		& \gate{H} & \qw
+	\end{quantikz}
+\end{center}
+
+\subsubsection{Definizione}
+
 \begin{equation}
 	H = \dfrac{1}{\sqrt{2}}
 	\begin{bmatrix}
@@ -40,15 +74,13 @@
 	\end{bmatrix}
 \end{equation}
 
+\subsubsection{Azione}
+
 \begin{equation}
 	\ket{0} \mapsto \dfrac{\ket{0} + \ket{1}}{\sqrt{2}}, \ket{1} \mapsto \dfrac{\ket{0} - \ket{1}}{\sqrt{2}}
 \end{equation}
 
-\begin{center}
-	\begin{quantikz}	
-		& \gate{H} & \qw
-	\end{quantikz}
-\end{center}
+Si dimostra utilizzando la base $\ket{0} = 	\begin{bmatrix} 1 \\ 0 \end{bmatrix}$, $\ket{1} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$:
 
 \begin{equation}
 	\begin{aligned}
