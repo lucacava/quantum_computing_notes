@@ -9,14 +9,14 @@
 \usepackage{amsmath}
 
 \author{Luca Cavallini}
-\title{Quantum Computing Notes}
+\title{Appunti di quantum computing}
 \date{\today}
 
 \begin{document}
 
 \maketitle
 
-\section{Fundamentals}
+\section{Fondamenti}
 
 \section{Gates}
 
@@ -28,7 +28,7 @@
 	\end{quantikz}
 \end{center}
 
-\subsection{Definizione}
+\subsubsection{Definizione matriciale}
 
 \begin{equation}
 	X =
@@ -38,12 +38,36 @@
 	\end{bmatrix}
 \end{equation}
 
+\subsubsection{Funzionamento}
+
 \begin{equation}
 	\begin{aligned}
 		& X \ket{0} = \ket{1}  \\  
 		& X \ket{1} = \ket{0}  \\  
 		& X (\alpha \ket{0} + \beta \ket{1}) = \alpha \ket{1} + \beta \ket{0}
 	\end{aligned}
+\end{equation}
+
+Dimostriamo l'ultima relazione utilizzando la base $\ket{0} = 	\begin{bmatrix} 1 \\ 0 \end{bmatrix}$, $\ket{1} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$:
+
+\begin{equation}
+	\begin{aligned}
+		X (\alpha \ket{0} + \beta \ket{1}) = 
+		& \begin{bmatrix}
+			0 & 1 \\
+			1 & 0
+		\end{bmatrix}
+		\left(
+		\alpha \begin{bmatrix} 1 \\ 0 \end{bmatrix} + \beta \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+		\right) =
+		\begin{bmatrix}
+			0 & 1 \\
+			1 & 0
+		\end{bmatrix} \begin{bmatrix} \alpha \\ \beta \end{bmatrix} = \\
+		& \begin{bmatrix} \beta \\ \alpha \end{bmatrix} = 
+		\alpha  \begin{bmatrix} 0 \\ 1 \end{bmatrix} + \beta \begin{bmatrix} 1 \\ 0 \end{bmatrix} =
+		\alpha \ket{1} + \beta \ket{0}
+	\end{aligned}	
 \end{equation}
 
 \subsection{Identity gate}
@@ -64,7 +88,7 @@
 	\end{quantikz}
 \end{center}
 
-\subsubsection{Definizione}
+\subsubsection{Definizione matriciale}
 
 \begin{equation}
 	H = \dfrac{1}{\sqrt{2}}
@@ -74,7 +98,7 @@
 	\end{bmatrix}
 \end{equation}
 
-\subsubsection{Azione}
+\subsubsection{Funzionamento}
 
 \begin{equation}
 	\ket{0} \mapsto \dfrac{\ket{0} + \ket{1}}{\sqrt{2}}, \ket{1} \mapsto \dfrac{\ket{0} - \ket{1}}{\sqrt{2}}
